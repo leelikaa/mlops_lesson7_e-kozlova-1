@@ -1,0 +1,5 @@
+["core"]
+    remote = wine_info_storage
+['remote "wine_info_storage"']
+    url = s3://e-kozlova-1
+	endpointurl = "http://194.180.188.67:9020"
