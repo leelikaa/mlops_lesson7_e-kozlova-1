@@ -1,4 +1,5 @@
 scikit-learn
+wandb
 numpy
 pandas
 joblib

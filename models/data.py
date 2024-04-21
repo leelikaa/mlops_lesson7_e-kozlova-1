@@ -2,6 +2,7 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 import numpy as np
+from config import config
 
 
 def load_data():
@@ -15,8 +16,8 @@ def split_dataset(X, y) -> dict:
     X_train, X_test, y_train, y_test = train_test_split(
         X,
         y,
-        test_size=0.2,
-        random_state=42)
+        test_size=config["data"]["test_size"],
+        random_state=config["random_state"])
     data = {
         "X_train": X_train,
         "X_test": X_test,
@@ -31,5 +32,12 @@ def scaler(data):
     X_test = data["X_test"]
     sc = StandardScaler()
     data["X_train"] = sc.fit_transform(X_train)
-    data["X_trest"] = sc.transform(X_test)
+    data["X_test"] = sc.transform(X_test)
     return data
+
+
+def prepare_data():
+    X, y = load_data()
+    data_origin = split_dataset(X, y)
+    data_prepared = scaler(data_origin)
+    return data_prepared
