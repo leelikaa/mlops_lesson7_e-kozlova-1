@@ -27,10 +27,10 @@ def split_dataset(X, y) -> dict:
     return data
 
 
+sc = StandardScaler()
 def scaler(data):
     X_train = data["X_train"]
     X_test = data["X_test"]
-    sc = StandardScaler()
     data["X_train"] = sc.fit_transform(X_train)
     data["X_test"] = sc.transform(X_test)
     return data

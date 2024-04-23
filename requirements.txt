@@ -5,3 +5,8 @@ pandas
 joblib
 apache-airflow
 dvc
+uvicorn
+requests
+pydantic
+fastapi
+streamlit
