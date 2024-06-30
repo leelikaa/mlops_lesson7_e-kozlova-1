@@ -27,6 +27,8 @@ dvc:
   stage: dvc
   image: python:3.8
   script:
+    - export AWS_ACCESS_KEY_ID=$DB_ACCESS_KEY
+    - export AWS_SECRET_ACCESS_KEY=$DB_SECRET_ACCESS_KEY
     - dvc pull
     - dvc repro
   only:
