@@ -5,7 +5,7 @@ import requests
 
 from pydantic import BaseModel
 from fastapi import FastAPI, HTTPException
-from models.data import sc
+from data_and_models.data import sc
 
 app = FastAPI()
 model_loaded = False

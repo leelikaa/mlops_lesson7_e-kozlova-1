@@ -2,11 +2,13 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 import numpy as np
-from models.config import config
+from config import config
+import os
 
 
 def load_data():
-    wine = pd.read_csv('winequality-red.csv')
+    file_path = os.path.join(os.path.dirname(__file__), 'winequality-red.csv')
+    wine = pd.read_csv(file_path)
     X = pd.DataFrame(wine.drop('quality', axis=1))
     y = pd.DataFrame(wine['quality'])
     return X, y

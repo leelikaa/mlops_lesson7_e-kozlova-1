@@ -1,5 +1,5 @@
 scikit-learn
-wandb
+clearml
 numpy
 pandas
 joblib
@@ -10,3 +10,5 @@ requests
 pydantic
 fastapi
 streamlit
+httpx
+pytest

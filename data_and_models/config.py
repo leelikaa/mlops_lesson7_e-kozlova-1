@@ -7,7 +7,7 @@ config = {
         "penalty": 'l2',
         "max_iter": 100,
         "multi_class": 'ovr',
-        "C": 0.1        
+        "C": 0.1       
     },
     "decision_tree": {
         "max_depth": 30,

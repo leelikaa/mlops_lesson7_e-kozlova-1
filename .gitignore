@@ -1,4 +1,12 @@
-/models/winequality-red.csv
+/data_and_models/winequality-red.csv
+/.dvc/tmp
+/.dvc/cache
+/.dvc/config.local
+/logs
+/wandb
+/data_and_models/model_LC.pkl
+/data_and_models/results_RF.json
+/data_and_models/results_LC.json
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
