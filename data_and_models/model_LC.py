@@ -1,7 +1,7 @@
 from sklearn.linear_model import LogisticRegression
 from data import prepare_data
 from train_models import train, test
-from config import config
+from models_config import config
 from clearml import Task
 import joblib
 import subprocess
@@ -43,7 +43,7 @@ def model_experiment(config_LC: dict):
     logger.report_single_value("AUC-ROC", value=results['mean_roc_auc'])
 
     joblib.dump(model_LC, '../data_dvc/model_LC.pkl', compress=True)
-    task.upload_artifact(name='model_LC',artifact_object='model_LC.pkl')
+    task.upload_artifact(name='model_LC', artifact_object='model_LC.pkl')
 
     task.close()
 
@@ -54,4 +54,3 @@ def model_experiment(config_LC: dict):
 
 if __name__ == "__main__":
     model_experiment(config_LC=config)
-

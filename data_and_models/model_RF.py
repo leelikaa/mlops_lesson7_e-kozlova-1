@@ -1,7 +1,7 @@
 from sklearn.ensemble import RandomForestClassifier
 from data import prepare_data
 from train_models import train, test
-from config import config
+from models_config import config
 from clearml import Task
 import joblib
 import subprocess
