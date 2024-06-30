@@ -4,7 +4,7 @@ numpy
 pandas
 joblib
 apache-airflow
-dvc
+dvc[s3]
 uvicorn
 requests
 pydantic
