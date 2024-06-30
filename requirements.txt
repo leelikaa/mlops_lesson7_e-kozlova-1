@@ -1,0 +1,14 @@
+scikit-learn
+clearml
+numpy
+pandas
+joblib
+apache-airflow
+dvc[s3]
+uvicorn
+requests
+pydantic
+fastapi
+streamlit
+httpx
+pytest
